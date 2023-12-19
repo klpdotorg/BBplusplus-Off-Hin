@@ -47,23 +47,16 @@ Game.appLoginEditScreen.prototype = {
 		_this.basePath = cordova.file.externalRootDirectory + "Android/data/com.akshara.BBplusplusOffHin/Files/Download/.gameFilesBB++V10_2/www/";
 
 		//* nEED to change this ****
-		_this.fullSize = 199299588;//,302978124
-		//BBplusplusOffHin
+		_this.fullSize = 307046981;//,302978124
 
-		//* change this zip file size according to bb++ ******
-		// _this.zipFiles = [["Assets1.zip", 26430143], ["Assets2.zip", 39780906], ["Assets3.zip", 18453216],
-		// ["Assets4.zip", 14402031], ["Assets5.zip", 19891065], ["Assets6.zip", 19889389],
-		// ["English.zip", 23759971], ["Kannada.zip", 25787866], ["Hindi.zip", 25508626],
-		// ["Odiya.zip", 40129117], ["Gujarati.zip", 31882078], ["questionSounds.zip", 162758079]];
+		//BBplusplusOffHin//119,374,649 +18,76,72,332
+		_this.zipFiles = [["Assets1.zip", 981561], ["Assets2.zip", 87770921], ["Assets4.zip", 95177050], ["HindiquestionSounds.zip", 119374649], ["sounds.zip", 3742800]];// old = 3683747
 
-		_this.zipFiles = [["Assets1.zip", 981561], ["Assets2.zip", 87770921], ["Assets4.zip", 95177050], ["HindiquestionSounds.zip", 103080138],["sounds.zip", 3742800]];// old = 3683747
-
-		 //["HindiquestionSounds.zip", 29272691],["KannadaquestionSounds.zip", 29272691], ["OdiyaquestionSounds.zip", 48682701], ["MarathiquestionSounds.zip", 39766797], ["TamilquestionSounds.zip", 30783494],
+		//["HindiquestionSounds.zip", 29272691],["KannadaquestionSounds.zip", 29272691], ["OdiyaquestionSounds.zip", 48682701], ["MarathiquestionSounds.zip", 39766797], ["TamilquestionSounds.zip", 30783494],
 
 		_this.counter = 0;
 		_this.counter1 = 0;
 
-		//alert(_this.user.language);
 
 		if (_this.user.language == "English") {
 			_this.fileCheck = [
@@ -403,7 +396,7 @@ Game.appLoginEditScreen.prototype = {
 				console.log(_this.counter, "counter>>>>>>");
 				_this.checkIfAllAssetsPresent();
 			}, function (error) {
-				console.log("file not present:download" + filename); 
+				console.log("file not present:download" + filename);
 				_this.downloadFiles(filename);
 			});
 	},
@@ -480,7 +473,7 @@ Game.appLoginEditScreen.prototype = {
 						// else if(filename=="Assets16.zip")
 						// 	_this.noOfAssets.text = "7/7";
 
-						if (filename == _this.user.language + "/EnglishquestionSounds.zip") {
+						if (filename == _this.user.language + "/HindiquestionSounds.zip") {
 							console.log("QSound");
 							_this.noOfAssets.text = "1/5";
 						}
