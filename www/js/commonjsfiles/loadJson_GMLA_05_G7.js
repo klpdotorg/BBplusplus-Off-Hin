@@ -301,7 +301,7 @@ var GMLA_05_G7_JSON = {
 	},
 
 	xyz_image: {
-		"frames": [
+		"frames": [ 
 
 			{
 				"filename": "Symbol 4 instance 10000",
